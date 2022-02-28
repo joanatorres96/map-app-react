@@ -8,9 +8,10 @@ export default function UserProfile(props){
 
     return(
         <div className="UserProfile">
-<Link to = "/" className="link">
-                         <div className="home-link"> 🔙 Retrun Home</div>
-                         </Link>       <header>Profile Page</header>
+            <Link to = "/" className="link">
+              <div className="home-link"> 🔙 Retrun Home</div>
+             </Link>       
+        <header>Profile Page</header>
 
        <img src="https://cdn-icons-png.flaticon.com/512/747/747545.png" alt="User Photograph" className="mb-2 user-photo" />
                          {/* <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Freepik - Flaticon</a> */}
@@ -24,7 +25,7 @@ export default function UserProfile(props){
                 <li><strong>Email: </strong>{props.data.email}</li>
                 <li><strong>Adress: </strong>{`${props.data.address.street}, ${props.data.address.suite},${props.data.address.zipcode} ${props.data.address.city}`}</li>
                 <li><strong>Phone Number: </strong>{props.data.phone}</li>
-                <li><strong>Website: </strong>{props.data.website}</li>
+                <li><strong>Website: </strong>    <a href={`https://${props.data.website}`}>{props.data.website}</a></li>
             </ul>
              <ul className="text-secondary profile-info">
              <div className="card-title">Company Info</div>

@@ -16,7 +16,6 @@ function searchData(){
 }
 
 function handleResponse(response){
-    console.log(response.data);
     setData(response.data);
     setLoad({ ready:true});
 }
