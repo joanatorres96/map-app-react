@@ -10,8 +10,8 @@ export default function Map(props) {
     let lon= props.coords.lng;
     const position = [lat, lon];
     const markericon = new L.Icon({
-      iconUrl: require("./img/marker-yellow.png"),
-      iconSize: [35, 55],
+      iconUrl: require("./img/marker-blue.png"),
+      iconSize: [55, 55],
     })
 
 return (

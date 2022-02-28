@@ -1,33 +1,41 @@
 import React from "react";
 import Map from "./Map";
+import "./UserProfile.css";
+import { Link } from "react-router-dom";
+
 
 export default function UserProfile(props){
 
     return(
         <div className="UserProfile">
+<Link to = "/" className="link">
+                         <div className="home-link"> 🔙 Retrun Home</div>
+                         </Link>       <header>Profile Page</header>
 
-       <header>Profile Page</header>
-       
-       <div className="row">
-           <div className="col-sm-6">
-            <ul>
-                <li>ID: {props.data.id}</li>
-                <li>Username: {props.data.username}</li>
-                <li>Name: {props.data.name}</li>
-                <li>Email: {props.data.email}</li>
-                <li>Adress: {`${props.data.address.street}, ${props.data.address.suite},${props.data.address.zipcode} ${props.data.address.city}`}</li>
-                <li>Phone Number: {props.data.phone}</li>
-                <li>Website: {props.data.website}</li>
+       <img src="https://cdn-icons-png.flaticon.com/512/747/747545.png" alt="User Photograph" className="mb-2 user-photo" />
+                         {/* <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Freepik - Flaticon</a> */}
+       <div className="row content">
+           <div className="col-sm-6 mt-5 ">
+            <ul className="text-secondary profile-info">
+                <div className="card-title">Personal Info</div>
+                <li><strong>ID: </strong>{props.data.id}</li>
+                <li><strong>Username: </strong>{props.data.username}</li>
+                <li><strong>Name: </strong>{props.data.name}</li>
+                <li><strong>Email: </strong>{props.data.email}</li>
+                <li><strong>Adress: </strong>{`${props.data.address.street}, ${props.data.address.suite},${props.data.address.zipcode} ${props.data.address.city}`}</li>
+                <li><strong>Phone Number: </strong>{props.data.phone}</li>
+                <li><strong>Website: </strong>{props.data.website}</li>
             </ul>
-             <ul>
-                 <li>Company: {props.data.company.name}</li>
-                 <li>Catch Phrase: {props.data.company.catchPhrase}</li>
-                 <li>BS: {props.data.company.bs}</li>
+             <ul className="text-secondary profile-info">
+             <div className="card-title">Company Info</div>
+                 <li><strong>Company: </strong>{props.data.company.name}</li>
+                 <li><strong>Catch Phrase: </strong>{props.data.company.catchPhrase}</li>
+                 <li><strong>BS: </strong>{props.data.company.bs}</li>
                 
              </ul>
                 
            </div>
-           <div className="col-sm-6">
+           <div className="col-sm-6 mt-5">
                <Map coords={props.data.address.geo} />
            </div>
        </div>

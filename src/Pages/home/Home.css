@@ -1,0 +1,15 @@
+.Home{
+    background: linear-gradient(135deg, rgb(94, 252, 232) 10%, rgb(115, 110, 254) 100%);
+    border-radius: 20px;
+    padding: 20px;
+
+}
+.web-title{
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #ffffff;
+    margin: 10px 0px 40px 0px;
+    text-shadow: 1px 4px 16px rgba(0, 0, 0, 0.3);
+
+}

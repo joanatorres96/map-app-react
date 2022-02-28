@@ -1,0 +1,53 @@
+.UserCards{
+    max-width: 90%;
+    display: block;
+    margin: 0 10% auto;
+}
+
+.user-card{
+    margin: 10px;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+.profile-title{
+   color: #5e87b8;
+   text-shadow: 1px 4px 16px rgba(0, 0, 0, 0.3);
+   text-decoration: underline;
+}
+
+.user-icon{
+    max-width: 50px;
+    margin-top: 20px;
+}
+
+.user-info{
+max-width: 95%;
+}
+.link-button{
+    display: block;
+    margin: 0 auto;
+    max-width: 200px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #83cee0;
+}
+.link-button:hover{
+    background-color: #ffffff;
+    transition:  linear 0.2s;
+}
+.link{
+    text-decoration: none;
+    color: #ffffff;
+}
+.link:hover{
+    color: #83cee0;
+}
+
+li{
+    list-style-type: none;
+}
+
+ul{
+    padding: 0;
+}
